@@ -5,3 +5,7 @@ openhab/userdata/jsondb/backup/*
 openhab/userdata/logs/*
 openhab/userdata/secrets/*
 openhab/userdata/tmp/*
+
+# Pihole stuff
+pihole/etc-pihole/**
+pihole/.pihole_env
