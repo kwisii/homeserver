@@ -1,0 +1,7 @@
+# openHAB stuff
+openhab/userdata/cache/*
+openhab/userdata/config/*
+openhab/userdata/jsondb/backup/*
+openhab/userdata/logs/*
+openhab/userdata/secrets/*
+openhab/userdata/tmp/*

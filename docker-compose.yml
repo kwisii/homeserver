@@ -1,0 +1,20 @@
+services:
+    openhab:
+      image: "openhab/openhab:5.1.0"
+      container_name: openhab
+      restart: always
+      ports:
+        - "8080:8080"
+      volumes:
+        - "/etc/localtime:/etc/localtime:ro"
+        - "/etc/timezone:/etc/timezone:ro"
+        - "./openhab/conf:/openhab/conf"
+        - "./openhab/addons:/openhab/addons"
+        - "./openhab/userdata:/openhab/userdata"
+      environment:
+        OPENHAB_HTTP_PORT: "8080"
+        OPENHAB_HTTPS_PORT: "8443"
+        EXTRA_JAVA_OPTS: "-Duser.timezone=Europe/Berlin"
+        CRYPTO_POLICY: unlimited
+      networks:
+        - default
